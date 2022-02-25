@@ -82,6 +82,7 @@ a:hover {
 
 img {
     aspect-ratio: 1.618/1;
-    width: var(--linewidth);
+    width: 100%;
+    max-width: var(--linewidth);
     object-fit: contain;
 }
