@@ -1,0 +1,87 @@
+@import 'PublicSans.css';
+
+@import 'https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@1.9.0/themes/prism-one-dark.css' (prefers-color-scheme: dark);
+@import 'https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@1.9.0/themes/prism-one-light.css' (prefers-color-scheme: light);
+
+:root {
+    --text-color: #222;
+    --background-color: #eee;
+    --link-color: #444;
+    --visited-link-color: #555;
+
+    --linewidth: 50ch;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #eee;
+        --background-color: #111;
+        --link-color: #ddd;
+        --visited-link-color: #ccc;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.33rem;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    overflow-x: hidden;
+}
+
+.container {
+    width: var(--linewidth);
+    max-width: 100%;
+    padding: 0rem 1rem;
+}
+
+h1:first-child {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 h3 h4 h5 h6 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 200;
+}
+
+.language-js {
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration-style: dotted;
+    text-decoration-thickness: .12em;
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+img {
+    aspect-ratio: 1.618/1;
+    width: var(--linewidth);
+    object-fit: contain;
+}

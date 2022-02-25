@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    src: url('PublicSans[wght].ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: italic;
+    src: url('PublicSans-Italic[wght].ttf') format('truetype');
+    font-weight: 100 900;    
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: oblique;
+    src: url('PublicSans-Italic[wght].ttf') format('truetype');
+    font-weight: 100 900;    
+}
