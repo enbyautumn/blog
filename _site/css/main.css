@@ -3,6 +3,8 @@
 @import 'https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@1.9.0/themes/prism-one-dark.css' (prefers-color-scheme: dark);
 @import 'https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@1.9.0/themes/prism-one-light.css' (prefers-color-scheme: light);
 
+@import 'darktoggle.css';
+
 :root {
     --text-color: #222;
     --background-color: #eee;
@@ -10,6 +12,11 @@
     --visited-link-color: #555;
 
     --linewidth: 50ch;
+
+    --linewidth: clamp(50ch, 50vw, 70ch);
+    
+    --transition-duration: 0.5s;
+    --transition-timing-function: ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +26,20 @@
         --link-color: #ddd;
         --visited-link-color: #ccc;
     }
+}
+
+:root.dark {
+    --text-color: #eee;
+    --background-color: #111;
+    --link-color: #ddd;
+    --visited-link-color: #ccc;
+}
+
+:root.light {
+    --text-color: #222;
+    --background-color: #eee;
+    --link-color: #444;
+    --visited-link-color: #555;
 }
 
 body {
@@ -36,6 +57,10 @@ body {
 
     color: var(--text-color);
     background-color: var(--background-color);
+    
+    transition-property: background-color, color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 
     overflow-x: hidden;
 }
@@ -62,7 +87,7 @@ p {
     font-weight: 200;
 }
 
-.language-js {
+pre {
     font-size: 1.1rem;
 }
 
@@ -81,8 +106,8 @@ a:hover {
 }
 
 img {
+    align-self: center;
     aspect-ratio: 1.618/1;
     width: 100%;
-    max-width: var(--linewidth);
     object-fit: contain;
 }
